@@ -1,6 +1,6 @@
-//helper
+
 const $ = (s, p = document) => p.querySelector(s);
-// Nav toggle
+
 const navToggle = $('.nav__toggle');
 const navMenu = $('.nav__menu');
 if (navToggle) {
@@ -10,7 +10,6 @@ if (navToggle) {
     navMenu.classList.toggle('open');
   });
 }
-// Hero form
 const heroForm = $('.hero__form');
 if (heroForm) {
   heroForm.addEventListener('submit', e => {
@@ -18,14 +17,13 @@ if (heroForm) {
     const input = heroForm.querySelector('input');
     const error = heroForm.querySelector('.form__error');
     if (!input.value.trim()) {
-      error.textContent = 'Şəhər adı daxil edin!';
+      error.textContent = 'Enter the city name!';
     } else {
-      error.textContent = `Əla seçim! ${input.value} üçün plan hazırlanır...`;
+      error.textContent = `good choice! ${input.value} ready plan for city..`;
       input.value = '';
     }
   });
 }
-// Contact form
 const contactForm = $('#contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
@@ -35,13 +33,12 @@ if (contactForm) {
     const msg = contactForm.message.value.trim();
     const error = contactForm.querySelector('.form__error');
     if (!name || !email.includes('@') || !msg) {
-      error.textContent = 'Xanaları düzgün doldurun!';
+      error.textContent = 'Error!';
     } else {
-      error.textContent = 'Mesaj göndərildi!';
+      error.textContent = 'Message sent!';
       localStorage.setItem('travelerName', name);
       contactForm.reset();
     }
   });
 }
-// Footer year
 $('#year').textContent = new Date().getFullYear();
