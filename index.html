@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TravelMate — Your Smart Travel Assistant</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">YourTravel</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="nav__menu">
+        <a href="#features">Home </a>
+        <a href="#destinations">Places</a>
+        <a href="#contact">Contact</a>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <h1>Your smart travel assistant</h1>
+      <p>Simplify your plans, live the best experience.</p>
+      <form class="hero__form" novalidate>
+        <input type="text" placeholder="The city you want to go to" required/>
+        <button type="submit">Start Travel</button>
+        <p class="form__error" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="features" class="features">
+      <h2>Why TravelMate?</h2>
+      <div class="features__grid">
+            <a href="https://www.personalcarservices.com/en/home-english/" target="_blank" class="card1">
+                Personal Car Services
+            </a>
+            <a href="https://tr.hotels.com/?locale=tr_TR&siteid=300000028&semcid=HCOM-TR.UB.GOOGLE.GT-c-TR.HOTEL&semdtl=a121745525415.b1168520860672.g1kwd-11212371.e1c.m1EAIaIQobChMIp8-GjYCcjwMVojgGAB3QgRFEEAAYASAAEgIFLfD_BwE.r1.c1.j11000998.k1.d1716263931250.h1e.i1.l1.n1.o1.p1.q1.s1hotels.t1.x1.f1.u1.v1.w1&gad_source=1&gad_campaignid=21745525415&gbraid=0AAAAACTxZ9aE_GRnT7WlDOcVFz0iY0IGc&gclid=EAIaIQobChMIp8-GjYCcjwMVojgGAB3QgRFEEAAYASAAEgIFLfD_BwE" target="_blank" class="card2">
+                Hotels
+            </a>
+            <a href="https://resanthotels.az/restaurants.html" target="_blank" class="card3">
+                Restaurants
+            </a>
+            <a href="https://taxi9111.az/en/" target="_blank" class="card4">
+                Taxies
+            </a>
+      </div>
+    </section>
+    <section id="destinations" class="destinations">
+      <h2>Populyar Places</h2>
+      <div class="destinations__grid">
+        <div class="place">
+          <img src="paris.jpg" alt="Paris"/>
+          <h3>Paris</h3>
+        </div>
+        <div class="place">
+          <img src="tokyo.jpg" alt="Tokyo"/>
+          <h3>Tokio</h3>
+        </div>
+        <div class="place">
+          <img src="balii.jpg" alt="Bali"/>
+          <h3>Bali</h3>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" novalidate>
+        <label>Name: <input name="name" required/></label>
+        <label>Email: <input type="email" name="email" required/></label>
+        <label>Your offer: <textarea name="message" required></textarea></label>
+        <button type="submit">SEnd</button>
+        <p class="form__error" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TravelMate</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
